@@ -8,4 +8,6 @@ Isaac Keslassy, Ariel Orda, and Tom Edsall. 2017. dRMT: Disaggregated
 Programmable Switching. In Proceedings of SIGCOMM ’17, Los Angeles,
 CA, USA, August 21-25, 2017, 14 pages.
 
+dRMT talk: [drmt_talk](https://github.com/anirudhSK/drmt_talk)
+
 My Note in Chinese: [dRMT: Disaggregated Programmable Switching, SIGCOMM17](http://www.cnblogs.com/qq952693358/p/7429394.html)
