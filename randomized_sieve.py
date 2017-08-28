@@ -2,7 +2,8 @@ from random import shuffle
 import time as tm
 import numpy as np
 import math
-import queue
+# import queue
+import Queue as queue
 
 def random_topological_sort_recursive(dag):
   # This is basically taken from networkx's topological_sort_recursive.
