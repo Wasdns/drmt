@@ -1,1 +1,11 @@
 Reproducing results of experiments.
+
+Each of these examples runs four architectures: 
+
+1.drmt with ipc=1; 
+
+2.drmt with ipc=2; 
+
+3.fine-grained rmt; 
+
+4.coarse-grained rmt.
