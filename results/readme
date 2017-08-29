@@ -9,3 +9,11 @@ Each of these examples runs four architectures:
 3.fine-grained rmt; 
 
 4.coarse-grained rmt.
+
+Three kinds of experiment are maintained here:
+
+1.switch.p4’s ingress pipeline;
+
+2.switch.p4’s egress pipeline;
+
+3.a combined ingress+egress program that runs on a single shared physical pipeline to improve utilization.
