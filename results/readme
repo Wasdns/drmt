@@ -46,13 +46,15 @@ Take switch-combined for example.
 
 3.First scheduling period on one processor
 
-4.Match units usage (max = 8 units) on one processor
+4.Steady state on one processor
 
-5.Action fields usage (max = 32 fields) on one processor
+5.Match units usage (max = 8 units) on one processor
 
-6.Match packets (max = 1 match packets) on one processor
+6.Action fields usage (max = 32 fields) on one processor
 
-7.Action packets (max = 1 action packets) on one processor
+7.Match packets (max = 1 match packets) on one processor
+
+8.Action packets (max = 1 action packets) on one processor
 
 ***** drmt_ipc_2 *****
 
@@ -60,9 +62,9 @@ Same with "drmt_ipc_1";
 
 because of ipc=2:
 
-6.Match packets (max = 2 match packets) on one processor
+7.Match packets (max = 2 match packets) on one processor
 
-7.Action packets (max = 2 action packets) on one processor
+8.Action packets (max = 2 action packets) on one processor
 
 ***** prmt_coarse *****
 
