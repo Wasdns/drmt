@@ -23,7 +23,39 @@ Critical path length = 81 cycles
 Academic license - for non-commercial use only
 Number of pipeline stages: 5.000000
 *********************************** Schedule************************************
-('|           t=0            |           t=1            |           t=2            |           t=3            |\n|     vlan_decap_MATCH     |      _condition_43       |    replica_type_MATCH    |egress_port_mapping_ACTION|\n| rewrite_multicast_MATCH  |      _condition_41       |                          |   replica_type_ACTION    |\n|        rid_MATCH         |      _condition_42       |                          |      _condition_50       |\n|     l3_rewrite_MATCH     |      _condition_44       |                          |                          |\n|       mirror_MATCH       |      _condition_46       |                          |                          |\n|egress_port_mapping_MATCH |    vlan_decap_ACTION     |                          |                          |\n|     egress_nat_MATCH     |      mirror_ACTION       |                          |                          |\n|                          |      _condition_52       |                          |                          |\n|                          |        rid_ACTION        |                          |                          |\n\n|           t=4            |           t=5            |           t=6            |           t=7            |\n|      rewrite_MATCH       |      _condition_45       |        mtu_MATCH         |  egress_qos_map_ACTION   |\n|                          |      _condition_49       |   egress_qos_map_MATCH   |      _condition_47       |\n|                          |      rewrite_ACTION      |   egress_bd_map_MATCH    | rewrite_multicast_ACTION |\n|                          |                          |                          |        mtu_ACTION        |\n|                          |                          |                          |   egress_filter_ACTION   |\n|                          |                          |                          |   egress_bd_map_ACTION   |\n\n|           t=8            |           t=9            |\n|    smac_rewrite_MATCH    |    egress_nat_ACTION     |\n| egress_vlan_xlate_MATCH  | egress_vlan_xlate_ACTION |\n|  egress_bd_stats_MATCH   |      _condition_48       |\n| egress_system_acl_MATCH  |egress_filter_drop_ACTION |\n|                          |  egress_bd_stats_ACTION  |\n|                          |    l3_rewrite_ACTION     |\n|                          |   smac_rewrite_ACTION    |\n|                          |      _condition_51       |\n|                          | egress_system_acl_ACTION |\n\n', '\n\n')
+('|           t=0            |           t=1            |           t=2            |           t=3            |
+|     vlan_decap_MATCH     |      _condition_43       |    replica_type_MATCH    |egress_port_mapping_ACTION|
+| rewrite_multicast_MATCH  |      _condition_41       |                          |   replica_type_ACTION    |
+|        rid_MATCH         |      _condition_42       |                          |      _condition_50       |
+|     l3_rewrite_MATCH     |      _condition_44       |                          |                          |
+|       mirror_MATCH       |      _condition_46       |                          |                          |
+|egress_port_mapping_MATCH |    vlan_decap_ACTION     |                          |                          |
+|     egress_nat_MATCH     |      mirror_ACTION       |                          |                          |
+|                          |      _condition_52       |                          |                          |
+|                          |        rid_ACTION        |                          |                          |
+
+|           t=4            |           t=5            |           t=6            |           t=7            |
+|      rewrite_MATCH       |      _condition_45       |        mtu_MATCH         |  egress_qos_map_ACTION   |
+|                          |      _condition_49       |   egress_qos_map_MATCH   |      _condition_47       |
+|                          |      rewrite_ACTION      |   egress_bd_map_MATCH    | rewrite_multicast_ACTION |
+|                          |                          |                          |        mtu_ACTION        |
+|                          |                          |                          |   egress_filter_ACTION   |
+|                          |                          |                          |   egress_bd_map_ACTION   |
+
+|           t=8            |           t=9            |
+|    smac_rewrite_MATCH    |    egress_nat_ACTION     |
+| egress_vlan_xlate_MATCH  | egress_vlan_xlate_ACTION |
+|  egress_bd_stats_MATCH   |      _condition_48       |
+| egress_system_acl_MATCH  |egress_filter_drop_ACTION |
+|                          |  egress_bd_stats_ACTION  |
+|                          |    l3_rewrite_ACTION     |
+|                          |   smac_rewrite_ACTION    |
+|                          |      _condition_51       |
+|                          | egress_system_acl_ACTION |
+
+', '
+
+')
 Match units usage (max = 8 units) on one processor
 |t=0 |t=1 |t=2 |t=3 |t=4 |t=5 |t=6 |t=7 |t=8 |t=9 |
 |7.0 | 0  |1.0 | 0  |1.0 | 0  |3.0 | 0  |4.0 | 0  |

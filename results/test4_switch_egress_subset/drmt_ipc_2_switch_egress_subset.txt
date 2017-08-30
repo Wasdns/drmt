@@ -21,7 +21,7 @@ Critical path length = 97 cycles
 
 
 ('Searching between limits ', 3, ' and ', 100, ' cycles')
-('\nperiod =', 52, ' cycles')
+('period =', 52, ' cycles')
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
@@ -34,7 +34,7 @@ Academic license - for non-commercial use only
 Picking output from RND sieve
 *************************** Running DRMT ILP solver ****************************
 ('Optimal solution found with gap ', 0.0)
-('\nperiod =', 27, ' cycles')
+('period =', 27, ' cycles')
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
@@ -46,7 +46,7 @@ Looking for greedy feasible solution for 30 seconds
 Picking output from RND sieve
 *************************** Running DRMT ILP solver ****************************
 ('Optimal solution found with gap ', 0.0)
-('\nperiod =', 15, ' cycles')
+('period =', 15, ' cycles')
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
@@ -58,7 +58,7 @@ Looking for greedy feasible solution for 30 seconds
 Picking output from RND sieve
 *************************** Running DRMT ILP solver ****************************
 ('Optimal solution found with gap ', 0.0)
-('\nperiod =', 9, ' cycles')
+('period =', 9, ' cycles')
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
@@ -70,7 +70,7 @@ Looking for greedy feasible solution for 30 seconds
 Picking output from RND sieve
 *************************** Running DRMT ILP solver ****************************
 ('Optimal solution found with gap ', 0.0)
-('\nperiod =', 6, ' cycles')
+('period =', 6, ' cycles')
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
@@ -83,7 +83,7 @@ Looking for greedy feasible solution for 30 seconds
 Picking output from RND sieve
 *************************** Running DRMT ILP solver ****************************
 ('Optimal solution found with gap ', 0.0)
-('\nperiod =', 4, ' cycles')
+('period =', 4, ' cycles')
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
@@ -96,7 +96,7 @@ Picking output from RND sieve
 ('Latency for RND sieve: ', 97)
 *************************** Running DRMT ILP solver ****************************
 ('Optimal solution found with gap ', 0.0)
-('\nperiod =', 3, ' cycles')
+('period =', 3, ' cycles')
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
@@ -115,10 +115,84 @@ Critical path length = 97 cycles
 
 
 ******************* First scheduling period on one processor********************
-('|           t=0            |           t=1            |           t=2            |           t=3            |\n|     vlan_decap_MATCH     | rewrite_multicast_MATCH  |      _condition_43       |                          |\n|        rid_MATCH         |                          |      _condition_41       |                          |\n|     l3_rewrite_MATCH     |                          |      _condition_42       |                          |\n|       mirror_MATCH       |                          |      _condition_52       |                          |\n|egress_port_mapping_MATCH |                          |                          |                          |\n|     egress_nat_MATCH     |                          |                          |                          |\n\n|           t=20           |           t=21           |           t=22           |           t=23           |\n|                          |                          |      _condition_44       |                          |\n|                          |                          |      _condition_46       |                          |\n|                          |                          |    vlan_decap_ACTION     |                          |\n|                          |                          |      mirror_ACTION       |                          |\n|                          |                          |        rid_ACTION        |                          |\n\n|           t=24           |           t=25           |           t=26           |           t=27           |\n|      rewrite_MATCH       |                          |                          |                          |\n|    replica_type_MATCH    |                          |                          |                          |\n\n|           t=44           |           t=45           |           t=46           |           t=47           |\n|                          |                          |egress_port_mapping_ACTION|                          |\n|                          |                          |   replica_type_ACTION    |                          |\n|                          |                          |      _condition_50       |                          |\n\n|           t=48           |           t=49           |           t=50           |           t=51           |\n|      _condition_45       |                          |        mtu_MATCH         |                          |\n|      _condition_49       |                          |   egress_qos_map_MATCH   |                          |\n| rewrite_multicast_ACTION |                          | egress_vlan_xlate_MATCH  |                          |\n|      rewrite_ACTION      |                          |  egress_bd_stats_MATCH   |                          |\n|                          |                          |   egress_bd_map_MATCH    |                          |\n\n|           t=72           |           t=73           |           t=74           |           t=75           |\n|  egress_qos_map_ACTION   |                          |    smac_rewrite_MATCH    |                          |\n| egress_vlan_xlate_ACTION |                          | egress_system_acl_MATCH  |                          |\n|      _condition_47       |                          |                          |                          |\n|  egress_bd_stats_ACTION  |                          |                          |                          |\n|        mtu_ACTION        |                          |                          |                          |\n|   egress_filter_ACTION   |                          |                          |                          |\n|   egress_bd_map_ACTION   |                          |                          |                          |\n\n|           t=96           |           t=97           |           t=98           |\n|                          |                          |    egress_nat_ACTION     |\n|                          |                          |      _condition_48       |\n|                          |                          |egress_filter_drop_ACTION |\n|                          |                          |    l3_rewrite_ACTION     |\n|                          |                          |   smac_rewrite_ACTION    |\n|                          |                          |      _condition_51       |\n|                          |                          | egress_system_acl_ACTION |\n\n', '\n\n')
+('|           t=0            |           t=1            |           t=2            |           t=3            |
+|     vlan_decap_MATCH     | rewrite_multicast_MATCH  |      _condition_43       |                          |
+|        rid_MATCH         |                          |      _condition_41       |                          |
+|     l3_rewrite_MATCH     |                          |      _condition_42       |                          |
+|       mirror_MATCH       |                          |      _condition_52       |                          |
+|egress_port_mapping_MATCH |                          |                          |                          |
+|     egress_nat_MATCH     |                          |                          |                          |
+
+|           t=20           |           t=21           |           t=22           |           t=23           |
+|                          |                          |      _condition_44       |                          |
+|                          |                          |      _condition_46       |                          |
+|                          |                          |    vlan_decap_ACTION     |                          |
+|                          |                          |      mirror_ACTION       |                          |
+|                          |                          |        rid_ACTION        |                          |
+
+|           t=24           |           t=25           |           t=26           |           t=27           |
+|      rewrite_MATCH       |                          |                          |                          |
+|    replica_type_MATCH    |                          |                          |                          |
+
+|           t=44           |           t=45           |           t=46           |           t=47           |
+|                          |                          |egress_port_mapping_ACTION|                          |
+|                          |                          |   replica_type_ACTION    |                          |
+|                          |                          |      _condition_50       |                          |
+
+|           t=48           |           t=49           |           t=50           |           t=51           |
+|      _condition_45       |                          |        mtu_MATCH         |                          |
+|      _condition_49       |                          |   egress_qos_map_MATCH   |                          |
+| rewrite_multicast_ACTION |                          | egress_vlan_xlate_MATCH  |                          |
+|      rewrite_ACTION      |                          |  egress_bd_stats_MATCH   |                          |
+|                          |                          |   egress_bd_map_MATCH    |                          |
+
+|           t=72           |           t=73           |           t=74           |           t=75           |
+|  egress_qos_map_ACTION   |                          |    smac_rewrite_MATCH    |                          |
+| egress_vlan_xlate_ACTION |                          | egress_system_acl_MATCH  |                          |
+|      _condition_47       |                          |                          |                          |
+|  egress_bd_stats_ACTION  |                          |                          |                          |
+|        mtu_ACTION        |                          |                          |                          |
+|   egress_filter_ACTION   |                          |                          |                          |
+|   egress_bd_map_ACTION   |                          |                          |                          |
+
+|           t=96           |           t=97           |           t=98           |
+|                          |                          |    egress_nat_ACTION     |
+|                          |                          |      _condition_48       |
+|                          |                          |egress_filter_drop_ACTION |
+|                          |                          |    l3_rewrite_ACTION     |
+|                          |                          |   smac_rewrite_ACTION    |
+|                          |                          |      _condition_51       |
+|                          |                          | egress_system_acl_ACTION |
+
+', '
+
+')
 ************************* Steady state on one processor*************************
 ******************p[u] is packet from u scheduling periods ago******************
-('|              t=0               |              t=1               |              t=2               |\n|  p[24].egress_qos_map_ACTION   |p[15].egress_port_mapping_ACTION|    p[24].smac_rewrite_MATCH    |\n|     p[0].vlan_decap_MATCH      |  p[0].rewrite_multicast_MATCH  |        p[16].mtu_MATCH         |\n| p[24].egress_vlan_xlate_ACTION |       p[7]._condition_44       |    p[32].egress_nat_ACTION     |\n|      p[16]._condition_45       |       p[7]._condition_46       |   p[16].egress_qos_map_MATCH   |\n|      p[24]._condition_47       |     p[7].vlan_decap_ACTION     |       p[0]._condition_43       |\n|      p[16]._condition_49       |   p[15].replica_type_ACTION    |       p[0]._condition_41       |\n|         p[0].rid_MATCH         |       p[7].mirror_ACTION       |       p[0]._condition_42       |\n|     p[0].l3_rewrite_MATCH      |      p[15]._condition_50       |      p[32]._condition_48       |\n| p[16].rewrite_multicast_ACTION |        p[7].rid_ACTION         |p[32].egress_filter_drop_ACTION |\n|  p[24].egress_bd_stats_ACTION  |                                | p[16].egress_vlan_xlate_MATCH  |\n|       p[8].rewrite_MATCH       |                                |  p[16].egress_bd_stats_MATCH   |\n|        p[24].mtu_ACTION        |                                |    p[32].l3_rewrite_ACTION     |\n|    p[8].replica_type_MATCH     |                                |   p[32].smac_rewrite_ACTION    |\n|       p[0].mirror_MATCH        |                                |   p[16].egress_bd_map_MATCH    |\n|   p[24].egress_filter_ACTION   |                                |       p[0]._condition_52       |\n| p[0].egress_port_mapping_MATCH |                                |      p[32]._condition_51       |\n|      p[16].rewrite_ACTION      |                                | p[32].egress_system_acl_ACTION |\n|     p[0].egress_nat_MATCH      |                                | p[24].egress_system_acl_MATCH  |\n|   p[24].egress_bd_map_ACTION   |                                |                                |\n\n', '\n\n')
+('|              t=0               |              t=1               |              t=2               |
+|  p[24].egress_qos_map_ACTION   |p[15].egress_port_mapping_ACTION|    p[24].smac_rewrite_MATCH    |
+|     p[0].vlan_decap_MATCH      |  p[0].rewrite_multicast_MATCH  |        p[16].mtu_MATCH         |
+| p[24].egress_vlan_xlate_ACTION |       p[7]._condition_44       |    p[32].egress_nat_ACTION     |
+|      p[16]._condition_45       |       p[7]._condition_46       |   p[16].egress_qos_map_MATCH   |
+|      p[24]._condition_47       |     p[7].vlan_decap_ACTION     |       p[0]._condition_43       |
+|      p[16]._condition_49       |   p[15].replica_type_ACTION    |       p[0]._condition_41       |
+|         p[0].rid_MATCH         |       p[7].mirror_ACTION       |       p[0]._condition_42       |
+|     p[0].l3_rewrite_MATCH      |      p[15]._condition_50       |      p[32]._condition_48       |
+| p[16].rewrite_multicast_ACTION |        p[7].rid_ACTION         |p[32].egress_filter_drop_ACTION |
+|  p[24].egress_bd_stats_ACTION  |                                | p[16].egress_vlan_xlate_MATCH  |
+|       p[8].rewrite_MATCH       |                                |  p[16].egress_bd_stats_MATCH   |
+|        p[24].mtu_ACTION        |                                |    p[32].l3_rewrite_ACTION     |
+|    p[8].replica_type_MATCH     |                                |   p[32].smac_rewrite_ACTION    |
+|       p[0].mirror_MATCH        |                                |   p[16].egress_bd_map_MATCH    |
+|   p[24].egress_filter_ACTION   |                                |       p[0]._condition_52       |
+| p[0].egress_port_mapping_MATCH |                                |      p[32]._condition_51       |
+|      p[16].rewrite_ACTION      |                                | p[32].egress_system_acl_ACTION |
+|     p[0].egress_nat_MATCH      |                                | p[24].egress_system_acl_MATCH  |
+|   p[24].egress_bd_map_ACTION   |                                |                                |
+
+', '
+
+')
 Match units usage (max = 8 units) on one processor
 |t=0|t=1|t=2|
 |8.0|1.0|7.0|
