@@ -43,13 +43,13 @@ Picking output from RND sieve
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
 ('Found Feasible Solution With Latency', 423)
-('Found Feasible Solution With Latency', 406)
+('Found Feasible Solution With Latency', 416)
 ('Found Feasible Solution With Latency', 375)
 ('Found Feasible Solution With Latency', 360)
-('Found Feasible Solution With Latency', 347)
 ('Found Feasible Solution With Latency', 332)
 ('Found Feasible Solution With Latency', 331)
 ('Found Feasible Solution With Latency', 294)
+('Found Feasible Solution With Latency', 291)
 ('Found Feasible Solution With Latency', 273)
 ('Found Feasible Solution With Latency', 249)
 ('Found Feasible Solution With Latency', 247)
@@ -95,7 +95,7 @@ Looking for greedy feasible solution for 30 seconds
 Picking output from PRMT
 ('Latency for PRMT ', 502)
 *************************** Running DRMT ILP solver ****************************
-('Hit time limit or interrupted, suboptimal solution found with gap ', 0.5179282868525895)
+('Hit time limit or interrupted, suboptimal solution found with gap ', 0.5179282868525896)
 ('\nperiod =', 22, ' cycles')
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************

@@ -41,11 +41,12 @@ Picking output from RND sieve
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
 ('Found Feasible Solution With Latency', 282)
-('Found Feasible Solution With Latency', 280)
-('Found Feasible Solution With Latency', 277)
-('Found Feasible Solution With Latency', 259)
+('Found Feasible Solution With Latency', 275)
+('Found Feasible Solution With Latency', 269)
+('Found Feasible Solution With Latency', 267)
 ('Found Feasible Solution With Latency', 252)
 ('Found Feasible Solution With Latency', 243)
+('Found Feasible Solution With Latency', 221)
 ('Found Feasible Solution With Latency', 220)
 ('Found Feasible Solution With Latency', 219)
 **************************** Running PRMT + rotator ****************************
@@ -59,14 +60,13 @@ Picking output from RND sieve
 ******************************* Scheduling DRMT ********************************
 ****************************** Running rnd sieve *******************************
 Looking for greedy feasible solution for 30 seconds
-('Found Feasible Solution With Latency', 283)
-('Found Feasible Solution With Latency', 278)
-('Found Feasible Solution With Latency', 275)
-('Found Feasible Solution With Latency', 269)
-('Found Feasible Solution With Latency', 251)
+('Found Feasible Solution With Latency', 280)
+('Found Feasible Solution With Latency', 267)
+('Found Feasible Solution With Latency', 252)
 ('Found Feasible Solution With Latency', 245)
 ('Found Feasible Solution With Latency', 228)
 ('Found Feasible Solution With Latency', 221)
+('Found Feasible Solution With Latency', 220)
 ('Found Feasible Solution With Latency', 218)
 **************************** Running PRMT + rotator ****************************
 *************************** Running greedy heuristic ***************************
