@@ -1,3 +1,5 @@
+<-----README----->
+
 Reproducing results of experiments.
 
 Each of these examples runs four architectures: 
@@ -17,3 +19,71 @@ Three kinds of experiment are maintained here:
 2.switch.p4’s egress pipeline;
 
 3.a combined ingress+egress program that runs on a single shared physical pipeline to improve utilization.
+
+<-----Results Observation----->
+
+Take switch-combined for example.
+
+***** drmt_ipc_1 *****
+
+1.Input DAG
+
+2.for 7 times:
+
+(1)Scheduling DRMT, Running rnd sieve
+
+(2)Running PRMT + rotator, Running greedy heuristic, Running ILP solver
+
+(3)Running DRMT ILP solver
+
+(4)the results of step 2:
+
+- Best achieved throughput = 1 packet every 21 cycles
+
+- Schedule length (thread count) = 505 cycles
+
+- Critical path length = 243 cycles
+
+3.First scheduling period on one processor
+
+4.Match units usage (max = 8 units) on one processor
+
+5.Action fields usage (max = 32 fields) on one processor
+
+6.Match packets (max = 1 match packets) on one processor
+
+7.Action packets (max = 1 action packets) on one processor
+
+***** drmt_ipc_2 *****
+
+Same with "drmt_ipc_1";
+
+because of ipc=2:
+
+6.Match packets (max = 2 match packets) on one processor
+
+7.Action packets (max = 2 action packets) on one processor
+
+***** prmt_coarse *****
+
+1.Input DAG
+
+2.Scheduling PRMT fine, Running greedy heuristic, Running ILP solver
+
+3.Schedule
+
+4.Match units usage (max = 8 units) on one processor
+
+5.Action fields usage (max = 32 fields) on one processor
+
+6.Match packets (max = 1 match packets) on one processor
+
+result: empty dictionary
+
+7.Action packets (max = 1 action packets) on one processor
+
+result: empty dictionary
+
+***** prmt_fine *****
+
+Same with "prmt_coarse".
